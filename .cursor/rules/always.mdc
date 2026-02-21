@@ -8,4 +8,5 @@ alwaysApply: false
 - **What**: Python library template (src layout). Rename to your project. **GitHub Issues** are the source of truth.
 - **Layout**: `src/kalvi_library_template/`, `tests/`. Tooling: uv, Ruff (lint + format), pytest, Pylint, mypy, pre-commit.
 - **Commands**: `uv run pytest` | `uv run ruff check src tests` | `uv run ruff format src tests` | `uv run pylint src/kalvi_library_template` | `uv run mypy src/kalvi_library_template` | `uv run pre-commit run --all-files`.
-- When implementing: get scope from **GitHub Issues**; run quality checks before done.
+- **Implement**: Get scope and acceptance criteria from the issue; for non-trivial work state a short plan first; implement and add/update tests; run quality checks before done. Use skills **implement-from-issue**, **plan**, **run-quality-checks**; rules **implementation.mdc**, **issues.mdc**.
+- **Skills**: implement-from-issue, plan, triage, run-quality-checks, release. **Rules**: always (this), python, implementation, issues.

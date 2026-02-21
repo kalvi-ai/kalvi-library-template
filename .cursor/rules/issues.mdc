@@ -1,0 +1,11 @@
+---
+description: How to use GitHub issues as source of truth. Apply when the user refers to an issue, or when implementing or planning work.
+alwaysApply: false
+---
+
+# Issues
+
+- **Scope and acceptance criteria** for implementation come from the **GitHub issue**. Do not add or assume requirements that are not in the issue.
+- **Task template** (`.github/ISSUE_TEMPLATE/task.yml`): Summary, Acceptance criteria, References. Bug template: Description, Steps to reproduce.
+- When implementing: identify the issue (number or link), read summary and acceptance criteria, and implement only to that scope. If the issue is vague, ask for clarification or propose concrete criteria.
+- **Suggested issues** for new repos: `.github/SUGGESTED_ISSUES.md`. Use **implement-from-issue** for implementation; **plan** for plan-only; **triage** to classify an issue, check completeness (summary + acceptance criteria or repro steps), and suggest labels (e.g. `needs-triage`, `question`, `good first issue`) or next step (ready / needs clarification / needs more info).

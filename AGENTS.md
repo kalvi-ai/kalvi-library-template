@@ -8,12 +8,12 @@ Python library template: src layout, uv, Ruff, pytest. Rename to your project.
 
 ## Key paths
 
-| Purpose   | Path                          |
-|----------|-------------------------------|
-| Config   | [pyproject.toml](pyproject.toml) |
-| Package  | [src/kalvi_library_template/](src/kalvi_library_template/) |
-| Tests    | [tests/](tests/)              |
-| Templates| [.github/ISSUE_TEMPLATE/](.github/ISSUE_TEMPLATE/) |
+| Purpose   | Path                               |
+| --------- | ---------------------------------- |
+| Config    | [pyproject.toml](pyproject.toml)   |
+| Package   | [src/kalvi_library_template/](src/kalvi_library_template/) |
+| Tests     | [tests/](tests/)                   |
+| Templates | [.github/ISSUE_TEMPLATE/](.github/ISSUE_TEMPLATE/) |
 
 ## Commands
 
@@ -28,11 +28,12 @@ Python library template: src layout, uv, Ruff, pytest. Rename to your project.
 ## When implementing
 
 1. Get scope and acceptance criteria from the **GitHub issue**.
-2. Implement; add or update tests.
-3. Run `uv run ruff check src tests` and `uv run pytest` before done. CI also runs Pylint, mypy, and pre-commit.
+2. For non-trivial work: state a short plan (scope, steps, how to validate) before editing.
+3. Implement; add or update tests.
+4. Run `uv run ruff check src tests` and `uv run pytest` before done. CI also runs Pylint, mypy, and pre-commit.
 
 ## Setup
 
-- **Rules**: `.cursor/rules/` (project, Python). Agent applies when relevant.
-- **Skills**: `.cursor/skills/` (run-quality-checks, release).
+- **Rules**: `.cursor/rules/` — always (project), python (style), implementation (from-issue flow), issues (source of truth). Agent applies when relevant.
+- **Skills**: `.cursor/skills/` — **implement-from-issue**, **plan**, **triage** (classify issue, check completeness, suggest labels), **run-quality-checks**, **release**.
 - **MCP**: `.cursor/mcp.json` (GitHub). Set `GITHUB_TOKEN`.

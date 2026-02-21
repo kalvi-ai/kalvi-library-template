@@ -41,6 +41,8 @@ uv run mypy src/kalvi_library_template
 uv run pre-commit run --all-files
 ```
 
+Pre-commit runs: check-yaml, check-json, check-toml, trailing-whitespace, end-of-file-fixer, check-merge-conflict, detect-private-key, check-added-large-files, yamllint, actionlint (`.github/workflows/`), markdownlint-cli2, typos, Ruff (check + format), and (on commit) commitizen. Configs: `.yamllint.yaml`, `.markdownlint.yaml`.
+
 Enable git hooks (code checks + commit message lint on every commit):
 
 ```bash
@@ -52,4 +54,4 @@ Commit messages must follow Conventional Commits (e.g. `feat: add X`). Use task 
 
 ## Full check
 
-Run in order: `uv run pytest` → `uv run ruff check src tests` → `uv run ruff format --check src tests` → `uv run pylint src/kalvi_library_template` → `uv run mypy src/kalvi_library_template` → `uv run pre-commit run --all-files`. Or just `uv run pre-commit run --all-files` (which runs Ruff); CI runs all of the above.
+Run in order: `uv run pytest` → `uv run ruff check src tests` → `uv run ruff format --check src tests` → `uv run pylint src/kalvi_library_template` → `uv run mypy src/kalvi_library_template` → `uv run pre-commit run --all-files`. Or just `uv run pre-commit run --all-files` (runs YAML/JSON/TOML/Markdown/typos + Ruff); CI runs the same.

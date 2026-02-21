@@ -1,0 +1,14 @@
+---
+description: When implementing a feature or fix from an issue. Apply when the user asks to implement, add, fix, or do an issue.
+globs: "src/**/*.py", "tests/**/*.py"
+alwaysApply: false
+---
+
+# Implementation
+
+- **Source of truth**: GitHub issue. Scope and acceptance criteria come from the issue; do not invent requirements.
+- **Before editing (non-trivial work)**: State a short plan: scope, 2–5 steps, how to validate. Trivial = one small file or obvious one-line fix.
+- **Code**: Implement in `src/kalvi_library_template/`; follow Python rule (Ruff, type hints, first-party `kalvi_library_template`).
+- **Tests**: Add or update tests so acceptance criteria are covered; pytest, `pythonpath` includes `src`.
+- **Before done**: Run `uv run pytest`, `uv run ruff check src tests`, `uv run ruff format --check src tests`. Use skill **run-quality-checks** for full CI parity.
+- **Commit**: Conventional Commits (e.g. `feat: add X`, `fix: Y`). Optionally "Fixes #N" in body to close the issue.

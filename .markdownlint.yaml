@@ -1,0 +1,22 @@
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+default: true
+
+# Line length: disable so prose and long URLs don't need wrapping
+MD013: false
+
+# First line in file may not be top-level heading (README often has badge/title)
+MD041: false
+
+# Allow multiple top-level headings (e.g. in docs)
+MD025: false
+
+# Unordered list style: dash
+MD004:
+  style: dash
+
+# Allow inline HTML where needed (e.g. badges, details)
+MD033: false
+
+# Table column alignment: Cursor's markdownlint (v0.40+) uses "aligned" by default;
+# pre-commit markdownlint-cli2 may use an older version. Disable so both accept simple tables.
+MD060: false
