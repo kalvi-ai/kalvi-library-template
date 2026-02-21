@@ -35,5 +35,5 @@ Python library template: src layout, uv, Ruff, pytest. Rename to your project.
 ## Setup
 
 - **Rules**: `.cursor/rules/` — always (project), python (style), implementation (from-issue flow), issues (source of truth). Agent applies when relevant.
-- **Skills**: `.cursor/skills/` — **implement-from-issue**, **plan**, **triage** (classify issue, check completeness, suggest labels), **run-quality-checks**, **release**.
+- **Skills**: `.cursor/skills/` — **implement-from-issue**, **plan**, **triage**, **review**, **commit**, **refactor** (clarity/style, no behavior change), **docs** (README, docstrings, CHANGELOG), **test** (add/extend tests only), **run-quality-checks**, **release**.
 - **MCP**: `.cursor/mcp.json` (GitHub). Set `GITHUB_TOKEN`.

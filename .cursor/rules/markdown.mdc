@@ -1,0 +1,12 @@
+---
+description: When editing Markdown. Apply for .md files so lint stays clean.
+globs: "**/*.md"
+alwaysApply: false
+---
+
+# Markdown
+
+- **Config**: [.markdownlint.yaml](.markdownlint.yaml). Respect it so pre-commit and editor agree.
+- **Section titles**: Use real headings (`##`, `###`), not standalone bold/italic (avoids MD036).
+- **Duplicate headings**: Same heading text under different parent sections is allowed (MD024 siblings_only). Avoid duplicate heading text within the same section.
+- **Tables**: Simple tables are fine; alignment is not required (MD060 disabled).

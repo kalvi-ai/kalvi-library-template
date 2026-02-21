@@ -20,3 +20,11 @@ MD033: false
 # Table column alignment: Cursor's markdownlint (v0.40+) uses "aligned" by default;
 # pre-commit markdownlint-cli2 may use an older version. Disable so both accept simple tables.
 MD060: false
+
+# Standalone bold/italic as section labels (e.g. **Why it helps**) are used in docs; allow them.
+MD036: false
+
+# Duplicate heading text: only flag when same content appears as sibling headings (same parent).
+# Allows e.g. "### Why it helps" under different ## sections.
+MD024:
+  siblings_only: true
