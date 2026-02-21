@@ -2,7 +2,7 @@
 
 Python library template: src layout, uv, Ruff, pytest, and Cursor agent setup. **GitHub Issues** are the source of truth.
 
-Use **Use this template** on GitHub to create a new repo, then see [TEMPLATE.md](TEMPLATE.md).
+**Using this template:** On GitHub click **Use this template** → Create a new repository, then follow [TEMPLATE.md](TEMPLATE.md). To rename the project and set up your library in one go: use the **bootstrap-from-template** skill in Cursor (give the new library name), or follow the [bootstrap checklist](docs/bootstrap-from-template.md) manually.
 
 ## Setup
 
@@ -53,6 +53,7 @@ uv run pre-commit run --all-files
 ## Documentation
 
 - [docs/](docs/) – overview, how-to, reference. Build with `uv run mkdocs build` (or `uv run nox -s docs`).
+- [docs/bootstrap-from-template.md](docs/bootstrap-from-template.md) – set up a new library from this template (skill or manual checklist)
 - [docs/principles.md](docs/principles.md) – project principles
 - [docs/decisions/](docs/decisions/) – architecture decision records (ADRs)
 - [docs/settings-pattern.md](docs/settings-pattern.md) – Pydantic Settings and env config (optional extra `[config]`)
@@ -64,6 +65,6 @@ uv run pre-commit run --all-files
 
 Pre-commit enforces: YAML/JSON/TOML syntax, yamllint, actionlint (workflows), markdownlint, typos, Ruff, commit message (Conventional Commits). Configs: `.editorconfig`, `.markdownlint.yaml`, `.yamllint.yaml`.
 
-## Renaming
+## Renaming (when using this template)
 
-Replace `kalvi_library_template` (package) and `kalvi-library-template` (project name) in `pyproject.toml`, `src/`, and imports.
+Replace `kalvi_library_template` and `kalvi-library-template` everywhere. **Easiest (Cursor):** use the **bootstrap-from-template** skill and provide your new library name; the agent renames and updates metadata. **Manual:** see the full file list in [docs/bootstrap-from-template.md](docs/bootstrap-from-template.md).
