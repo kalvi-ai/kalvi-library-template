@@ -21,7 +21,8 @@ htmlcov/
 
 # IDE / OS
 .idea/
-.vscode/
+.vscode/*
+!.vscode/tasks.json
 .DS_Store
 .env
 .env.local

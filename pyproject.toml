@@ -25,6 +25,7 @@ dev = [
     "pylint>=3.0",
     "mypy>=1.0",
     "pre-commit>=3.0",
+    "commitizen>=3.0",
     "build>=1.0",
     "twine>=5.0",
 ]
@@ -44,6 +45,7 @@ dev = [
     "pylint>=3.0",
     "mypy>=1.0",
     "pre-commit>=3.0",
+    "commitizen>=3.0",
     "build>=1.0",
     "twine>=5.0",
 ]
@@ -86,3 +88,9 @@ strict = true
 warn_return_any = true
 warn_unused_ignores = true
 show_error_codes = true
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "v$version"
+version = "0.1.0"
+version_files = ["pyproject.toml:version", "src/kalvi_library_template/__init__.py:__version__"]

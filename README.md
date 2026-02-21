@@ -13,7 +13,18 @@ Use **Use this template** on GitHub to create a new repo, then see [TEMPLATE.md]
 uv sync --group dev
 ```
 
+**Enable git hooks** (optional but recommended): run code checks and commit message lint on every commit:
+
+```bash
+uv run pre-commit install
+uv run pre-commit install --hook-type commit-msg
+```
+
+Commit messages must follow [Conventional Commits](https://www.conventionalcommits.org/) (e.g. `feat: add X`, `fix: Y`). Config: `[tool.commitizen]` in `pyproject.toml`.
+
 ## Commands
+
+From the terminal, or **Run Task** in Cursor/VS Code (`.vscode/tasks.json`):
 
 ```bash
 uv run pytest
@@ -21,7 +32,7 @@ uv run ruff check src tests
 uv run ruff format src tests
 uv run pylint src/kalvi_library_template
 uv run mypy src/kalvi_library_template
-uv run pre-commit run --all-files   # or: pre-commit install (then runs on commit)
+uv run pre-commit run --all-files
 ```
 
 ## Layout

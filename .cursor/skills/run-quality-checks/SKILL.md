@@ -41,7 +41,14 @@ uv run mypy src/kalvi_library_template
 uv run pre-commit run --all-files
 ```
 
-Install hooks to run on commit: `uv run pre-commit install`
+Enable git hooks (code checks + commit message lint on every commit):
+
+```bash
+uv run pre-commit install
+uv run pre-commit install --hook-type commit-msg
+```
+
+Commit messages must follow Conventional Commits (e.g. `feat: add X`). Use task **enable git hooks** or the commands above.
 
 ## Full check
 

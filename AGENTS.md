@@ -23,6 +23,7 @@ Python library template: src layout, uv, Ruff, pytest. Rename to your project.
 - Pylint: `uv run pylint src/kalvi_library_template`
 - Type check: `uv run mypy src/kalvi_library_template`
 - Pre-commit: `uv run pre-commit run --all-files`
+- Commit messages: Conventional Commits (enforced if hooks enabled). Enable hooks: `uv run pre-commit install` and `uv run pre-commit install --hook-type commit-msg`
 
 ## When implementing
 
