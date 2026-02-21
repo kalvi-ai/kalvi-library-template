@@ -1,0 +1,72 @@
+[project]
+name = "kalvi-library-template"
+version = "0.1.0"
+description = "Python library template with uv, Ruff, pytest, and Cursor agent setup."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+keywords = ["template", "library"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "pytest-asyncio>=0.21",
+    "ruff>=0.4",
+    "pylint>=3.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/kalvi_library_template"]
+
+[dependency-groups]
+dev = [
+    "pytest>=7",
+    "pytest-asyncio>=0.21",
+    "ruff>=0.4",
+    "pylint>=3.0",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 88
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "B", "UP", "SIM"]
+ignore = ["E501", "B008"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.ruff.lint.isort]
+known-first-party = ["kalvi_library_template"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-v --tb=short"
+asyncio_mode = "auto"
+
+[tool.pylint.main]
+jobs = 0
+ignore-patterns = ["\\.venv", "venv", "build", "dist"]
+recursive = true
+
+[tool.pylint.messages_control]
+disable = ["C0114", "C0115", "C0116", "R0903", "R0913"]
+
+[tool.pylint.format]
+max-line-length = 88

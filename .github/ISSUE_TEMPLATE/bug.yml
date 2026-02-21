@@ -1,0 +1,22 @@
+name: Bug
+description: Something is broken
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Describe the bug and how to reproduce."
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      placeholder: What happened vs expected
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. ...\n2. ..."
+    validations:
+      required: true

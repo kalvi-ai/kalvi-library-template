@@ -1,0 +1,11 @@
+---
+description: Project context and tooling. Apply when working in this repo.
+alwaysApply: false
+---
+
+# Project
+
+- **What**: Python library template (src layout). Rename to your project. **GitHub Issues** are the source of truth.
+- **Layout**: `src/kalvi_library_template/`, `tests/`. Tooling: uv, Ruff (lint + format), pytest, Pylint.
+- **Commands**: `uv run pytest` | `uv run ruff check src tests` | `uv run ruff format src tests` | `uv run pylint src/kalvi_library_template`.
+- When implementing: get scope from **GitHub Issues**; run quality checks before done.

@@ -1,0 +1,11 @@
+---
+description: Python and Ruff conventions. Apply when editing or reviewing Python.
+globs: "**/*.py"
+alwaysApply: false
+---
+
+# Python
+
+- **Style**: Ruff (py311, line-length 88). `uv run ruff check src tests`, `uv run ruff format src tests`. E501 ignored (formatter); B008 ignored for fixtures.
+- **Imports**: isort via Ruff; first-party is `kalvi_library_template`.
+- **Tests**: pytest; pythonpath includes `src`. Prefer type hints.
