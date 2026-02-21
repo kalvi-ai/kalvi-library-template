@@ -5,7 +5,7 @@ This template uses **Pydantic Settings** for type-safe, environment-based config
 ## Pattern
 
 - **Do not** use `python-dotenv` or `load_dotenv()` in library code. Production should set environment variables via the platform (host, CI, container).
-- For **local development**, use a `.env` file. Pydantic Settings can load it via `env_file=".env"` so you don't need to export variables manually. Copy [.env.example](../.env.example) to `.env` and never commit `.env`.
+- For **local development**, use a `.env` file. Pydantic Settings can load it via `env_file=".env"` so you don't need to export variables manually. Copy `.env.example` (in the repo root) to `.env` and never commit `.env`.
 
 ## Example
 

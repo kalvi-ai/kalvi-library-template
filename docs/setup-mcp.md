@@ -1,6 +1,6 @@
 # MCP setup (Cursor)
 
-This project uses [Model Context Protocol](https://cursor.com/docs/context/mcp) (MCP) for Cursor agent tools. Config: [.cursor/mcp.json](../.cursor/mcp.json). For global config use `~/.cursor/mcp.json`.
+This project uses [Model Context Protocol](https://cursor.com/docs/context/mcp) (MCP) for Cursor agent tools. Config: `.cursor/mcp.json` in the project root. For global config use `~/.cursor/mcp.json`.
 
 ## Required
 

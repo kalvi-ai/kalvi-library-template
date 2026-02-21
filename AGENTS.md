@@ -42,7 +42,7 @@ Python library template: src layout, uv, Ruff, pytest. Cursor-only agent setup f
 ## Setup (Cursor)
 
 - **Rules**: [.cursor/rules/](.cursor/rules/) — activation and globs; project context is this file (AGENTS.md).
-- **Skills**: [.cursor/skills/](.cursor/skills/) — use **implement-from-issue**, **plan**, **triage**, **review**, **project-review**, **commit**, **refactor**, **docs**, **test**, **run-quality-checks**, **release**, **debug**, **dependency-update**, **maintain**.
+- **Skills**: [.cursor/skills/](.cursor/skills/) — use **implement-from-issue**, **plan**, **triage**, **review**, **project-review**, **commit**, **refactor**, **docs**, **test**, **run-quality-checks**, **release**, **debug**, **dependency-update**, **maintain**, **bootstrap-from-template**.
 - **Commands**: [.cursor/commands/](.cursor/commands/) — slash commands (e.g. `/code-review`, `/run-quality-checks`) for repeatable workflows.
 - **Hooks**: [.cursor/hooks.json](.cursor/hooks.json) — lifecycle hooks (e.g. format after edit). See [docs/cursor-setup.md](docs/cursor-setup.md).
 - **MCP**: [.cursor/mcp.json](.cursor/mcp.json). GitHub (issues), Exa (research), Context7 (docs). Set `GITHUB_TOKEN`. Optional: Exa, Context7. See [docs/setup-mcp.md](docs/setup-mcp.md); do not commit API keys. In Cursor Settings → Tools, disable duplicate or unused MCP servers to avoid token bloat.

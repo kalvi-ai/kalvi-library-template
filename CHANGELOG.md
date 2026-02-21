@@ -19,5 +19,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Community files: SECURITY.md, CODE_OF_CONDUCT.md, CHANGELOG.md, .gitattributes, .env.example, pull request template.
 - Documentation: logging and settings patterns, testing guide, post-create checklist.
 
+<!-- Replace YOUR-ORG/YOUR-REPO with your repository path when using this template -->
+
 [Unreleased]: https://github.com/kalvi-library-template/kalvi-library-template/compare/v0.1.0...HEAD
 [0.1.0]: https://github.com/kalvi-library-template/kalvi-library-template/releases/tag/v0.1.0

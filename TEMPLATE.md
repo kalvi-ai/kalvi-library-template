@@ -3,7 +3,7 @@
 1. On GitHub: **Use this template** → **Create a new repository**.
 2. Enable **Issues** in the new repo (Settings → General).
 3. Create issues from [.github/SUGGESTED_ISSUES.md](.github/SUGGESTED_ISSUES.md). GitHub Issues are the source of truth; agents do not use a plan doc.
-4. Rename the project: replace `kalvi_library_template` and `kalvi-library-template` in `pyproject.toml`, `src/`, and any imports.
+4. Rename the project: replace `kalvi_library_template` and `kalvi-library-template` everywhere. **Easiest**: use the **bootstrap-from-template** skill (see [.cursor/skills/bootstrap-from-template/SKILL.md](.cursor/skills/bootstrap-from-template/SKILL.md)) and give the new library name; the agent will do the full rename and metadata update. **Manual**: follow the checklist in [docs/bootstrap-from-template.md](docs/bootstrap-from-template.md).
 5. Update [LICENSE](LICENSE): set your name and year in the copyright line.
 6. Set `GITHUB_TOKEN` for the GitHub MCP (Cursor Settings or env) if using Cursor.
 

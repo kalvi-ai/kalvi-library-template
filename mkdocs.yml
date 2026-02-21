@@ -17,12 +17,23 @@ plugins:
 
 nav:
   - Home: index.md
+  - Bootstrap from template: bootstrap-from-template.md
   - Principles: principles.md
   - Decisions: decisions/README.md
   - Settings pattern: settings-pattern.md
   - Testing: testing.md
   - Cursor setup: cursor-setup.md
   - MCP setup: setup-mcp.md
+  - Project review rubric: project-review-rubric.md
+  - Decisions (ADRs):
+      - 0000 use MADR: decisions/0000-use-madr-and-decisions-folder.md
+      - 0001 logging: decisions/0001-logging-in-libraries.md
+  - Research:
+      - README: research/README.md
+      - Linters and formatters: research/linters-formatters.md
+      - Project grounding: research/project-grounding-research.md
+      - Skills research: research/skills-research.md
+  - Specs: specs/README.md
   - API:
       - kalvi_library_template: api/kalvi_library_template.md
 
