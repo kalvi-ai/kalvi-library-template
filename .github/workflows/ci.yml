@@ -46,3 +46,24 @@ jobs:
 
       - name: Pre-commit
         run: uv run pre-commit run --all-files
+
+  test-optional-extras:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        run: uv python install
+
+      - name: Install dependencies and [config] extra
+        run: |
+          uv sync --frozen --group dev
+          uv pip install '.[config]'
+
+      - name: Test optional [config] extra
+        run: uv run pytest tests/test_optional_config.py -v

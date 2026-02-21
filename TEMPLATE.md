@@ -19,6 +19,16 @@
 - **GitHub**: CI (tests + coverage, Ruff, Pylint, mypy, bandit, pip-audit, pre-commit), issue templates (Task, Bug), pull request template, SUGGESTED_ISSUES. Community files: SECURITY.md, CODE_OF_CONDUCT.md, CHANGELOG.md, .gitattributes, .env.example.
 - **Git hooks**: Run `uv run pre-commit install` and `uv run pre-commit install --hook-type commit-msg` to run checks and Conventional Commit lint on each commit.
 
+## Making a minimal library
+
+The template is batteries-included. For a tiny library with fewer dev tools you can slim down:
+
+- **Dev deps**: In [pyproject.toml](pyproject.toml), remove nox, bandit, pip-audit, mkdocs, mkdocstrings from `[dependency-groups]` dev and `[project.optional-dependencies]` dev (keep pytest, ruff, pylint, mypy, pre-commit, commitizen, build, twine as needed).
+- **CI**: In [.github/workflows/ci.yml](.github/workflows/ci.yml), remove the Bandit and pip-audit steps; if you removed MkDocs, remove any docs-build steps. Keep tests, coverage, Ruff, Pylint, mypy, pre-commit.
+- **Optional**: Remove optional extras `[config]` and `[logging]` from pyproject if you do not need them; remove [noxfile.py](noxfile.py) if you removed nox.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) and [README.md](README.md) for the full command list; after stripping, update those to match.
+
 ## Make this repo a template
 
 Settings → General → check **Template repository**.
