@@ -2,6 +2,23 @@
 
 When you create a new repository from this template, you can either rename and update everything manually (see **TEMPLATE.md** in the repository root) or use the **bootstrap-from-template** skill so an agent does it in one pass.
 
+## Workflow
+
+```mermaid
+flowchart TD
+  Start([Use this template]) --> CreateRepo[Create new repo on GitHub]
+  CreateRepo --> EnableIssues[Enable Issues in repo settings]
+  EnableIssues --> OptionalIssues[Optional: create issues from SUGGESTED_ISSUES]
+  OptionalIssues --> Rename{Rename and setup}
+  Rename -->|Using Cursor| Cursor[Open repo in Cursor, give library name]
+  Cursor --> Skill[Agent runs bootstrap-from-template skill]
+  Skill --> Finalize
+  Rename -->|Manual| Checklist[Follow file checklist below]
+  Checklist --> Finalize[Update LICENSE, set GITHUB_TOKEN if needed]
+  Finalize --> Verify[Run uv lock and quality checks]
+  Verify --> Done([Done])
+```
+
 ## Using the skill (Cursor)
 
 1. Create a new repo from this template (GitHub **Use this template**).

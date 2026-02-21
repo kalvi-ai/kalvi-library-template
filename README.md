@@ -2,7 +2,7 @@
 
 Python library template: src layout, uv, Ruff, pytest, and Cursor agent setup. **GitHub Issues** are the source of truth.
 
-**Using this template:** On GitHub click **Use this template** → Create a new repository, then follow [TEMPLATE.md](TEMPLATE.md). To rename the project and set up your library in one go: use the **bootstrap-from-template** skill in Cursor (give the new library name), or follow the [bootstrap checklist](docs/bootstrap-from-template.md) manually.
+**Using this template:** On GitHub click **Use this template** → Create a new repository, then follow [TEMPLATE.md](TEMPLATE.md). To rename the project and set up your library in one go: use the **bootstrap-from-template** skill in Cursor (give the new library name), or follow the [bootstrap checklist](docs/bootstrap-from-template.md) manually. See the [workflow diagram](docs/bootstrap-from-template.md#workflow) in the bootstrap doc.
 
 ## Setup
 
