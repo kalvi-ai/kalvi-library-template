@@ -31,3 +31,12 @@ jobs:
 
       - name: Ruff format check
         run: uv run ruff format --check src tests
+
+      - name: Pylint
+        run: uv run pylint src/kalvi_library_template
+
+      - name: Mypy
+        run: uv run mypy src/kalvi_library_template
+
+      - name: Pre-commit
+        run: uv run pre-commit run --all-files

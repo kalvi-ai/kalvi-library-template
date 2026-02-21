@@ -21,12 +21,14 @@ Python library template: src layout, uv, Ruff, pytest. Rename to your project.
 - Lint: `uv run ruff check src tests`
 - Format: `uv run ruff format src tests`
 - Pylint: `uv run pylint src/kalvi_library_template`
+- Type check: `uv run mypy src/kalvi_library_template`
+- Pre-commit: `uv run pre-commit run --all-files`
 
 ## When implementing
 
 1. Get scope and acceptance criteria from the **GitHub issue**.
 2. Implement; add or update tests.
-3. Run `uv run ruff check src tests` and `uv run pytest` before done.
+3. Run `uv run ruff check src tests` and `uv run pytest` before done. CI also runs Pylint, mypy, and pre-commit.
 
 ## Setup
 

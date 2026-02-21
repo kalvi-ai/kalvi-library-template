@@ -20,6 +20,8 @@ uv run pytest
 uv run ruff check src tests
 uv run ruff format src tests
 uv run pylint src/kalvi_library_template
+uv run mypy src/kalvi_library_template
+uv run pre-commit run --all-files   # or: pre-commit install (then runs on commit)
 ```
 
 ## Layout

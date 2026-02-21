@@ -9,7 +9,6 @@ build/
 dist/
 *.egg-info/
 .eggs/
-uv.lock
 
 # Testing / coverage
 .pytest_cache/
