@@ -9,6 +9,8 @@ Python library template: src layout, uv, Ruff, pytest, and Cursor agent setup. *
 - Python 3.11+
 - [uv](https://docs.astral.sh/uv/)
 
+The repo uses `.python-version` for uv's default locally; CI tests all supported versions (see classifiers in `pyproject.toml`).
+
 ```bash
 uv sync --group dev
 ```

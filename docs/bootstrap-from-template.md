@@ -33,6 +33,7 @@ Update content in:
 | `docs/testing.md` | Import and coverage path |
 | `mkdocs.yml` | `site_name`, `site_url`, nav API entry |
 | `README.md` | Title, description, all paths and package refs |
+| `TEMPLATE.md` | Step 4: replace with "Already done if you used the bootstrap-from-template skill" or a short note that the repo was created from the template |
 | `AGENTS.md` | Package path and all command examples |
 | `CONTRIBUTING.md` | Coverage path |
 | `CHANGELOG.md` | Compare/tag URLs (if repo known) |

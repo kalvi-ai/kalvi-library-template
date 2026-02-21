@@ -1,3 +1,8 @@
+---
+name: research
+description: Research, web search, or deep dive; optionally write under docs/research/. Use when the user asks to research, look up docs, or write a research doc.
+---
+
 # Research skill
 
 Use when the user asks for **research**, **web search**, **deep dive**, or **current docs** on a topic.

@@ -132,3 +132,6 @@ tests = ["tests", "*/tests"]
 [tool.coverage.report]
 show_missing = true
 fail_under = 80
+
+[tool.bandit]
+exclude_dirs = ["tests", ".venv", "venv", "build", "dist", "site"]

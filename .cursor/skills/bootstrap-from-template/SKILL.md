@@ -45,6 +45,7 @@ Replace **every** occurrence in the repo (excluding `.git/`, `.venv/`, and binar
 | `docs/testing.md` | Import example and coverage path |
 | `mkdocs.yml` | `site_name`, `site_url` (if repo URL known), `nav` API entry to `<package_name>.md` |
 | `README.md` | Title, description (if provided), all command paths and package path, "Replace..." note (update or remove) |
+| `TEMPLATE.md` | Step 4: replace with "Already done if you used the bootstrap-from-template skill" or a short "This repo was created from the template" note so the new repo does not imply the rename is still to do |
 | `AGENTS.md` | Package path in table and in every command example |
 | `CONTRIBUTING.md` | Coverage path in commands |
 | `CHANGELOG.md` | `[Unreleased]` and version links: replace `kalvi-library-template` with `org/repo` or project name in URL if repo given |

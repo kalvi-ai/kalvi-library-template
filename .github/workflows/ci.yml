@@ -69,6 +69,17 @@ jobs:
       - name: Build docs (strict)
         run: uv run mkdocs build --strict
 
+  linkcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Lychee link check
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: --verbose --no-progress 'docs/**/*.md' '*.md'
+          fail: true
+
   test-optional-extras:
     runs-on: ubuntu-latest
     steps:
