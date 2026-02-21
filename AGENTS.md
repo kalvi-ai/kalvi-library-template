@@ -1,14 +1,10 @@
-
-
-<!-- Source: .ruler/AGENTS.md -->
-
-# Agent guide
+# Agent guide (Cursor)
 
 **GitHub Issues** are the source of truth. Scope and acceptance criteria come from issues.
 
 ## What this is
 
-Python library template: src layout, uv, Ruff, pytest. Rename to your project.
+Python library template: src layout, uv, Ruff, pytest. Cursor-only agent setup for complex projects. Rename to your project.
 
 ## Key paths
 
@@ -40,9 +36,12 @@ Python library template: src layout, uv, Ruff, pytest. Rename to your project.
 3. Implement; add or update tests.
 4. Run `uv run ruff check src tests scripts` and `uv run pytest` before done. CI also runs Pylint, mypy, and pre-commit.
 
-## Setup
+## Setup (Cursor)
 
-- **Rules**: `.cursor/rules/` — Cursor activation and globs; project context in this file (AGENTS.md). Agent applies when relevant.
-- **Skills**: Canonical skills in `.ruler/skills/`; Ruler propagates to Cursor (`.cursor/skills/`), Claude (`.claude/skills/`), Gemini (`.gemini/skills/`), Codex (`.codex/skills/`). Use **implement-from-issue**, **plan**, **triage**, **review**, **commit**, **refactor**, **docs**, **test**, **run-quality-checks**, **release**.
-- **MCP**: Defined in `.ruler/ruler.toml`; Ruler propagates to `.cursor/mcp.json`, `.zed/settings.json`, etc. GitHub (issues), Exa (research), Context7 (docs). Set `GITHUB_TOKEN`. Optional: Exa, Context7. See [docs/setup-mcp.md](docs/setup-mcp.md); do not commit API keys.
-- **Codex**: Set `CODEX_HOME="$(pwd)/.codex"` so Codex uses project MCP and config.
+- **Rules**: [.cursor/rules/](.cursor/rules/) — activation and globs; project context is this file (AGENTS.md).
+- **Skills**: [.cursor/skills/](.cursor/skills/) — use **implement-from-issue**, **plan**, **triage**, **review**, **project-review**, **commit**, **refactor**, **docs**, **test**, **run-quality-checks**, **release**.
+- **Commands**: [.cursor/commands/](.cursor/commands/) — slash commands (e.g. `/code-review`, `/run-quality-checks`) for repeatable workflows.
+- **Hooks**: [.cursor/hooks.json](.cursor/hooks.json) — lifecycle hooks (e.g. format after edit). See [docs/cursor-setup.md](docs/cursor-setup.md).
+- **MCP**: [.cursor/mcp.json](.cursor/mcp.json). GitHub (issues), Exa (research), Context7 (docs). Set `GITHUB_TOKEN`. Optional: Exa, Context7. See [docs/setup-mcp.md](docs/setup-mcp.md); do not commit API keys. In Cursor Settings → Tools, disable duplicate or unused MCP servers to avoid token bloat.
+- **Indexing**: [.cursorignore](.cursorignore) — excludes paths from codebase indexing (faster index). Edit in Settings → Indexing & Docs if needed.
+- **Subagents**: Use Cursor’s built-in subagents for parallel work; add custom subagents only when you need specific tool access or prompts. See [docs/cursor-setup.md](docs/cursor-setup.md).

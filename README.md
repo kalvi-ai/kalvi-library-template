@@ -40,7 +40,7 @@ uv run pre-commit run --all-files
 - `src/kalvi_library_template/` – package
 - `tests/` – pytest
 - `examples/` – [examples/](examples/) (e.g. `hello.py`)
-- [AGENTS.md](AGENTS.md) – agent guide (generated from [.ruler/](.ruler/) by [Ruler](https://github.com/intellectronica/ruler); edit `.ruler/AGENTS.md` then run `npx @intellectronica/ruler apply --no-gitignore`)
+- [AGENTS.md](AGENTS.md) – Cursor agent guide (commands, paths, skills, MCP). See [docs/cursor-setup.md](docs/cursor-setup.md) for rules, hooks, commands, indexing.
 - [AGENTIC-WORKFLOW.md](AGENTIC-WORKFLOW.md) – agentic flow research and recommendation
 - [CONTRIBUTING.md](CONTRIBUTING.md) – how to contribute
 
@@ -50,7 +50,9 @@ uv run pre-commit run --all-files
 - [docs/principles.md](docs/principles.md) – project principles
 - [docs/decisions/](docs/decisions/) – architecture decision records (ADRs)
 - [docs/specs/](docs/specs/) – formal specifications (optional; scope usually from [GitHub Issues](.github/ISSUE_TEMPLATE/))
-- [docs/research/](docs/research/) – background and research (e.g. [linters-formatters](docs/research/linters-formatters.md), [skills-research](docs/research/skills-research.md), [project-grounding-research](docs/research/project-grounding-research.md))
+- [docs/research/](docs/research/) – background and research
+- [docs/cursor-setup.md](docs/cursor-setup.md) – Cursor rules, skills, commands, hooks, MCP, indexing
+- [docs/setup-mcp.md](docs/setup-mcp.md) – MCP servers (GitHub, Exa, Context7)
 
 Pre-commit enforces: YAML/JSON/TOML syntax, yamllint, actionlint (workflows), markdownlint, typos, Ruff, commit message (Conventional Commits). Configs: `.editorconfig`, `.markdownlint.yaml`, `.yamllint.yaml`.
 

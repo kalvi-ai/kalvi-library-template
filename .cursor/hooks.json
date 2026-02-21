@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "hooks": {
+    "afterFileEdit": [
+      {
+        "command": "uv run python scripts/cursor-after-file-edit.py"
+      }
+    ]
+  }
+}

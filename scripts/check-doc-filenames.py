@@ -21,8 +21,6 @@ ROOT_ALLOWLIST = frozenset(
         "README.md",
         "CONTRIBUTING.md",
         "AGENTS.md",
-        "CLAUDE.md",  # Ruler-generated for Claude Code
-        "WARP.md",  # Ruler-generated for Warp (if not using AGENTS.md)
         "AGENTIC-WORKFLOW.md",
         "TEMPLATE.md",
         "CHANGELOG.md",

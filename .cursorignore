@@ -1,0 +1,31 @@
+# Codebase indexing exclusions (Cursor). Same syntax as .gitignore.
+# Reduces index size and speeds up semantic search. Chat/Composer can still read these files.
+
+# Python / venv
+.venv/
+venv/
+.uv/
+__pycache__/
+*.py[cod]
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Linting / type check
+.ruff_cache/
+.pylint.d/
+.mypy_cache/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+*.log

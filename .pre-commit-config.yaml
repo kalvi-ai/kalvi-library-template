@@ -8,9 +8,7 @@ repos:
       - id: check-json
       - id: check-toml
       - id: trailing-whitespace
-        exclude: ^(AGENTS\.md|CLAUDE\.md|WARP\.md|\.cursor/mcp\.json|\.cursor/skills/|\.zed/|\.trae/|\.codex/|\.gemini/|\.mcp\.json|\.claude/skills/)
       - id: end-of-file-fixer
-        exclude: ^(AGENTS\.md|CLAUDE\.md|WARP\.md|\.cursor/mcp\.json|\.cursor/skills/|\.zed/|\.trae/|\.codex/|\.gemini/|\.mcp\.json|\.claude/skills/)
       - id: check-merge-conflict
       - id: detect-private-key
       - id: check-added-large-files
@@ -29,18 +27,12 @@ repos:
     hooks:
       - id: markdownlint-cli2
         args: ["--fix"]
-        exclude: ^(AGENTS\.md|CLAUDE\.md|WARP\.md|\.cursor/skills/|\.zed/|\.trae/|\.codex/|\.gemini/|\.claude/skills/)
   - repo: https://github.com/crate-ci/typos
     rev: v1.26.0
     hooks:
       - id: typos
   - repo: local
     hooks:
-      - id: ruler-apply
-        name: ruler apply (sync agent rules when .ruler/ present)
-        entry: bash scripts/ruler-pre-commit.sh
-        language: system
-        pass_filenames: false
       - id: check-doc-filenames
         name: check doc filenames (kebab under docs/)
         entry: uv run python scripts/check-doc-filenames.py

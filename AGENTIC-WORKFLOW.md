@@ -9,7 +9,7 @@ Deep research summary on agentic workflows, spec-driven development, and skills,
 ### A. Issues as source of truth (what this template does)
 
 - **Idea**: GitHub Issues hold scope, acceptance criteria, and “why.” Agents (and humans) get constraints from issues; no separate spec doc.
-- **Pros**: Single place for work items, traceability, prevents “requirements quietly mutating mid-implementation,” works with any agent (Cursor, Codex, Copilot, Claude).
+- **Pros**: Single place for work items, traceability, prevents “requirements quietly mutating mid-implementation,” works with Cursor (and other issue-aware agents).
 - **Cons**: Issue text is often informal; not executable; less structure than formal specs.
 - **Best for**: Single/small teams, libraries, apps where one issue ≈ one deliverable and acceptance criteria are enough.
 
@@ -39,7 +39,7 @@ Deep research summary on agentic workflows, spec-driven development, and skills,
 - **Fact**: [Research (arXiv 2602.11988)](https://arxiv.org/html/2602.11988v1) shows repository-level context files (e.g. AGENTS.md) can **reduce** task success and **increase** inference cost when they’re long or aspirational.
 - **Recommendation from research**: Keep human-written context **minimal and actionable** (e.g. exact commands, real error patterns, production gotchas). Avoid long principle lists and vague “compliance checklist” content; ~200–300 lines of concrete guidance is a suggested ceiling before quality degrades.
 
-### E. Skills and rules (Cursor/Codex)
+### E. Skills and rules (Cursor)
 
 - **Skills**: Encapsulate repeatable workflows (e.g. “run quality checks,” “release”).
 - **Rules**: Project/convention guidance (e.g. Python style, paths).
