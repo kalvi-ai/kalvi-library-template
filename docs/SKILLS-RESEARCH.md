@@ -34,11 +34,11 @@ Short research summary on adding **review** and **commit** (and similar) skills 
 **What a “commit” skill can do**
 
 - **Input**: Staged (or unstaged) diff; optionally issue number.
-- **Process**: Summarize changes, pick type (feat/fix/docs/chore/etc.), write a short subject and optional body with “Fixes #N” if applicable.
-- **Output**: Suggested Conventional Commit message only. Remind user to run `uv run pre-commit run --all-files` (or pre-commit install) before committing.
-- **Boundary**: **Suggest only**; do not run `git add` or `git commit` for the user (avoids accidental commits and keeps control with the user).
+- **Process**: Summarize changes, pick type (feat/fix/docs/chore/etc.), write a short subject and optional body with “Fixes #N” if applicable. Propose the message, remind user to run `uv run pre-commit run --all-files` (or pre-commit install), then ask for explicit approval.
+- **Output**: Proposed Conventional Commit message; after user approves (e.g. yes/commit/approve), run `git commit` with that message (only staged files). If user says “suggest only”, output the message only and do not run any git commands.
+- **Boundary**: Run `git commit` only after explicit user approval. Do not run `git add` unless the user explicitly asked to add and commit. User can say “suggest only” to get the message only and run git themselves.
 
-**Recommendation**: Add a **commit** skill that suggests a commit message and pre-commit reminder; user copies and runs git themselves.
+**Recommendation**: Add a **commit** skill that proposes a commit message and pre-commit reminder, asks for approval, and runs `git commit` when the user approves; user can instead say “suggest only” and run git themselves.
 
 ---
 
