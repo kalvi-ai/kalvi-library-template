@@ -2,18 +2,41 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "all checks (nox)",
+      "type": "shell",
+      "command": "uv run nox",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "enable git hooks",
       "type": "shell",
       "command": "uv run pre-commit install && uv run pre-commit install --hook-type commit-msg",
-      "presentation": { "reveal": "always", "panel": "shared" },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
       "problemMatcher": []
     },
     {
       "label": "pytest",
       "type": "shell",
       "command": "uv run pytest",
-      "group": { "kind": "test", "isDefault": true },
-      "presentation": { "reveal": "always", "panel": "shared" },
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
       "problemMatcher": []
     },
     {
@@ -21,14 +44,20 @@
       "type": "shell",
       "command": "uv run ruff check src tests scripts",
       "group": "build",
-      "presentation": { "reveal": "always", "panel": "shared" },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
       "problemMatcher": []
     },
     {
       "label": "ruff format",
       "type": "shell",
       "command": "uv run ruff format src tests scripts",
-      "presentation": { "reveal": "always", "panel": "shared" },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
       "problemMatcher": []
     },
     {
@@ -36,7 +65,10 @@
       "type": "shell",
       "command": "uv run ruff format --check src tests scripts",
       "group": "build",
-      "presentation": { "reveal": "always", "panel": "shared" },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
       "problemMatcher": []
     },
     {
@@ -44,7 +76,10 @@
       "type": "shell",
       "command": "uv run pylint src/kalvi_library_template scripts",
       "group": "build",
-      "presentation": { "reveal": "always", "panel": "shared" },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
       "problemMatcher": []
     },
     {
@@ -52,7 +87,10 @@
       "type": "shell",
       "command": "uv run mypy src/kalvi_library_template scripts",
       "group": "build",
-      "presentation": { "reveal": "always", "panel": "shared" },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
       "problemMatcher": []
     },
     {
@@ -60,7 +98,10 @@
       "type": "shell",
       "command": "uv run pre-commit run --all-files",
       "group": "build",
-      "presentation": { "reveal": "always", "panel": "shared" },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
       "problemMatcher": []
     },
     {
@@ -74,7 +115,7 @@
         "mypy",
         "pre-commit"
       ],
-      "group": { "kind": "build", "isDefault": true },
+      "group": "build",
       "problemMatcher": []
     }
   ]

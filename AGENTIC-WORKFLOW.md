@@ -88,7 +88,7 @@ For a single Python library or a small app, **issues + acceptance criteria + pla
 
 **Recommendation: include a triage skill for the agent; optionally use GitHub's AI intake for automation.**
 
-- **Triage** = classify (task / bug / question), check completeness (summary + acceptance criteria or repro steps), suggest labels, and recommend next step (ready for implement / needs clarification / needs more info). Standard practice ([Kubernetes](https://kubernetes.dev/docs/guide/issue-triage), [OpenSauced](https://opensauced.pizza/docs/contributing/triage-guide)) is to do this so issues are actionable before implementation.
+- **Triage** = classify (task / bug / question), check completeness (summary + acceptance criteria or repro steps), suggest labels, and recommend next step (ready for implement / needs clarification / needs more info). Standard practice (e.g. [Kubernetes issue triage](https://kubernetes.dev/docs/guide/issue-triage)) is to do this so issues are actionable before implementation.
 - **Agent triage skill**: When the user says "triage #12" or "which issues are ready?", the agent reads the issue(s), classifies, checks completeness, and suggests labels and next step. Fits "issues as source of truth"—triage keeps the backlog ready for **implement-from-issue**.
 - **GitHub's AI-powered issue intake**: [AI assessment comment labeler](https://docs.github.com/en/issues/tracking-your-work-with-issues/administering-issues/triaging-an-issue-with-ai) runs in Actions when the label `request ai review` is applied. Use it for automation; use the **triage** skill for on-demand triage in the IDE.
 

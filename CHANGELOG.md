@@ -1,5 +1,7 @@
 # Changelog
 
+<!-- markdownlint-disable MD042 -->
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -19,7 +21,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Community files: SECURITY.md, CODE_OF_CONDUCT.md, CHANGELOG.md, .gitattributes, .env.example, pull request template.
 - Documentation: logging and settings patterns, testing guide, post-create checklist.
 
-<!-- Replace YOUR-ORG/YOUR-REPO with your repository path when using this template -->
+<!-- When using this template: replace the # placeholders below with your repo URLs, e.g. https://github.com/your-org/your-repo/compare/v0.1.0...HEAD -->
 
-[Unreleased]: https://github.com/kalvi-library-template/kalvi-library-template/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/kalvi-library-template/kalvi-library-template/releases/tag/v0.1.0
+[Unreleased]: #
+[0.1.0]: #
+
+<!-- markdownlint-enable MD042 -->
