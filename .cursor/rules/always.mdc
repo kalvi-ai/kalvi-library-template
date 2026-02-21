@@ -7,4 +7,4 @@ alwaysApply: false
 
 Project context and commands: see [AGENTS.md](AGENTS.md) at repo root (generated from `.ruler/` by Ruler).
 
-- **Summary**: Python library template (src layout). **GitHub Issues** = source of truth. Implement from issue; run `uv run pytest` and `uv run ruff check src tests` before done. Use skills **implement-from-issue**, **plan**, **run-quality-checks**; rules **implementation.mdc**, **issues.mdc**.
+- **Summary**: Python library template (src layout). **GitHub Issues** = source of truth. Implement from issue; run `uv run pytest` and `uv run ruff check src tests scripts` before done. Use skills **implement-from-issue**, **plan**, **run-quality-checks**; rules **implementation.mdc**, **issues.mdc**.

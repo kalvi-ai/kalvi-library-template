@@ -25,7 +25,7 @@ Use when the user asks to **refactor** (e.g. "refactor this module", "clean up X
 1. If non-trivial: state a short refactor plan (what to extract/rename/split, what stays).
 2. Apply edits; keep behavior identical (same inputs → same outputs).
 3. Add or adjust tests only if structure change requires it (e.g. testing a new helper); do not broaden coverage beyond what’s needed for the refactor.
-4. Run `uv run pytest`, `uv run ruff check src tests`, `uv run ruff format src tests` (or **run-quality-checks**) before done.
+4. Run `uv run pytest`, `uv run ruff check src tests scripts`, `uv run ruff format src tests scripts` (or **run-quality-checks**) before done.
 
 ## Notes
 

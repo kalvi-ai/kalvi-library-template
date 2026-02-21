@@ -17,7 +17,7 @@ Use when the user asks to **add tests** (e.g. "add tests for X", "improve covera
 1. **Locate** – Identify the code under test in `src/kalvi_library_template/` and the corresponding test file in `tests/` (e.g. `tests/test_validation.py`). Create the test file if it doesn’t exist.
 2. **Scenarios** – Cover happy path, edge cases (empty input, boundaries, invalid input), and error paths (exceptions) where relevant.
 3. **Style** – pytest; `pythonpath` includes `src` (see `pyproject.toml`). Use type hints; follow `.cursor/rules/python.mdc`. Use fixtures if they already exist in `conftest.py`.
-4. **Run** – Execute `uv run pytest` for the touched tests (or all). Run `uv run ruff check src tests` and `uv run ruff format src tests` (or **run-quality-checks**) before done.
+4. **Run** – Execute `uv run pytest` for the touched tests (or all). Run `uv run ruff check src tests scripts` and `uv run ruff format src tests scripts` (or **run-quality-checks**) before done.
 
 ## Notes
 

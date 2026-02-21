@@ -26,6 +26,6 @@ Work through and report briefly on each that applies:
 
 - **Pass / concerns** – One line: "Pass" or "Concerns" (and how many).
 - **Findings** – Bullet list: each finding with file/area and a concrete suggestion. Order by importance (blocking vs nice-to-have).
-- **Optional** – One-line reminder to run **run-quality-checks** (or at least `uv run pytest` and `uv run ruff check src tests`) before commit.
+- **Optional** – One-line reminder to run **run-quality-checks** (or at least `uv run pytest` and `uv run ruff check src tests scripts`) before commit.
 
 Do not run linters or tests yourself unless the user asks; focus on reading the diff and code. Do not apply edits; only suggest.

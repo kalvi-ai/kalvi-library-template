@@ -62,9 +62,7 @@ def check_path(path: str) -> str | None:
     parts = path.split("/")
     name = parts[-1]
     error: str | None = None
-    under_docs = parts[0] == "docs" or (
-        len(parts) >= 2 and parts[0] == "docs" and parts[1] == "research"
-    )
+    under_docs = parts[0] == "docs"
 
     if len(parts) == 1:
         if name not in ROOT_ALLOWLIST:

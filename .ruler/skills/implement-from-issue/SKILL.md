@@ -23,7 +23,7 @@ description: Implements work from a GitHub issue (scope + acceptance criteria). 
    - Follow project conventions (see `.cursor/rules/python.mdc` and `always.mdc`).
 
 4. **Validate before done**
-   - Run the **run-quality-checks** skill (or at minimum: `uv run pytest`, `uv run ruff check src tests`, `uv run ruff format --check src tests`).
+   - Run the **run-quality-checks** skill (or at minimum: `uv run pytest`, `uv run ruff check src tests scripts`, `uv run ruff format --check src tests scripts`).
    - Confirm behavior matches the issue’s acceptance criteria.
 
 ## Notes

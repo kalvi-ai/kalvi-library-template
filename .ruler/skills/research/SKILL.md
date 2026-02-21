@@ -1,4 +1,9 @@
-# Research skill
+---
+name: research
+description: Gathers and synthesizes information (web search, library docs); optionally writes a doc under docs/research/. Use when the user asks to research, web search, deep dive, or find current docs.
+---
+
+# Research
 
 Use when the user asks for **research**, **web search**, **deep dive**, or **current docs** on a topic.
 
