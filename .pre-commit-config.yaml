@@ -43,8 +43,6 @@ repos:
         entry: uv run ruff format --check src tests
         language: system
         pass_filenames: false
-  - repo: local
-    hooks:
       - id: commitizen
         name: commit message (conventional)
         entry: uv run cz check --commit-msg-file
