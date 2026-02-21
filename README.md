@@ -28,10 +28,10 @@ From the terminal, or **Run Task** in Cursor/VS Code (`.vscode/tasks.json`):
 
 ```bash
 uv run pytest
-uv run ruff check src tests
-uv run ruff format src tests
-uv run pylint src/kalvi_library_template
-uv run mypy src/kalvi_library_template
+uv run ruff check src tests scripts
+uv run ruff format src tests scripts
+uv run pylint src/kalvi_library_template scripts
+uv run mypy src/kalvi_library_template scripts
 uv run pre-commit run --all-files
 ```
 
@@ -40,7 +40,7 @@ uv run pre-commit run --all-files
 - `src/kalvi_library_template/` – package
 - `tests/` – pytest
 - `examples/` – [examples/](examples/) (e.g. `hello.py`)
-- [AGENTS.md](AGENTS.md) – agent guide
+- [AGENTS.md](AGENTS.md) – agent guide (generated from [.ruler/](.ruler/) by [Ruler](https://github.com/intellectronica/ruler); edit `.ruler/AGENTS.md` then run `npx @intellectronica/ruler apply --no-gitignore`)
 - [AGENTIC-WORKFLOW.md](AGENTIC-WORKFLOW.md) – agentic flow research and recommendation
 - [CONTRIBUTING.md](CONTRIBUTING.md) – how to contribute
 

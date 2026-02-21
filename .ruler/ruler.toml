@@ -1,0 +1,35 @@
+# Ruler: single source for agent rules, MCP, and skills.
+# See https://github.com/intellectronica/ruler
+
+# Only these agents (Gemini, Cursor, Zed, Claude, Trae, Codex, Warp)
+default_agents = ["gemini-cli", "cursor", "zed", "claude", "trae", "codex", "warp"]
+
+# Warp uses AGENTS.md at root (same as others); no separate WARP.md
+[agents.warp]
+enabled = true
+output_path = "AGENTS.md"
+
+# --- MCP servers (propagated to .cursor/mcp.json, .zed/settings.json, .codex, .gemini, .mcp.json) ---
+[mcp]
+enabled = true
+merge_strategy = "merge"
+
+[mcp_servers.github]
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-github"]
+
+[mcp_servers.github.env]
+GITHUB_PERSONAL_ACCESS_TOKEN = "${GITHUB_TOKEN}"
+
+[mcp_servers.exa]
+url = "https://mcp.exa.ai/mcp"
+
+[mcp_servers.context7]
+url = "https://mcp.context7.com/mcp"
+
+[mcp_servers.context7.headers]
+CONTEXT7_API_KEY = "${CONTEXT7_API_KEY}"
+
+# --- Skills: .ruler/skills/ propagated to Cursor, Claude, Gemini, Codex ---
+[skills]
+enabled = true

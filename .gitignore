@@ -26,3 +26,9 @@ htmlcov/
 .DS_Store
 .env
 .env.local
+
+# Ruler: outputs for agents not in our seven (gemini, cursor, zed, claude, trae, codex, warp)
+.agents/
+.opencode/
+.vibe/
+.skillz/

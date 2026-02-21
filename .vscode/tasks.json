@@ -19,7 +19,7 @@
     {
       "label": "ruff check",
       "type": "shell",
-      "command": "uv run ruff check src tests",
+      "command": "uv run ruff check src tests scripts",
       "group": "build",
       "presentation": { "reveal": "always", "panel": "shared" },
       "problemMatcher": []
@@ -27,14 +27,14 @@
     {
       "label": "ruff format",
       "type": "shell",
-      "command": "uv run ruff format src tests",
+      "command": "uv run ruff format src tests scripts",
       "presentation": { "reveal": "always", "panel": "shared" },
       "problemMatcher": []
     },
     {
       "label": "ruff format (check)",
       "type": "shell",
-      "command": "uv run ruff format --check src tests",
+      "command": "uv run ruff format --check src tests scripts",
       "group": "build",
       "presentation": { "reveal": "always", "panel": "shared" },
       "problemMatcher": []
@@ -42,7 +42,7 @@
     {
       "label": "pylint",
       "type": "shell",
-      "command": "uv run pylint src/kalvi_library_template",
+      "command": "uv run pylint src/kalvi_library_template scripts",
       "group": "build",
       "presentation": { "reveal": "always", "panel": "shared" },
       "problemMatcher": []
@@ -50,7 +50,7 @@
     {
       "label": "mypy",
       "type": "shell",
-      "command": "uv run mypy src/kalvi_library_template",
+      "command": "uv run mypy src/kalvi_library_template scripts",
       "group": "build",
       "presentation": { "reveal": "always", "panel": "shared" },
       "problemMatcher": []
