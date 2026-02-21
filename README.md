@@ -42,8 +42,15 @@ uv run pre-commit run --all-files
 - `examples/` – [examples/](examples/) (e.g. `hello.py`)
 - [AGENTS.md](AGENTS.md) – agent guide
 - [AGENTIC-WORKFLOW.md](AGENTIC-WORKFLOW.md) – agentic flow research and recommendation
-- [docs/](docs/) – [LINTERS-FORMATTERS.md](docs/LINTERS-FORMATTERS.md), [SKILLS-RESEARCH.md](docs/SKILLS-RESEARCH.md) (review/commit skills), etc.
 - [CONTRIBUTING.md](CONTRIBUTING.md) – how to contribute
+
+## Documentation
+
+- [docs/](docs/) – overview, how-to, reference
+- [docs/principles.md](docs/principles.md) – project principles
+- [docs/decisions/](docs/decisions/) – architecture decision records (ADRs)
+- [docs/specs/](docs/specs/) – formal specifications (optional; scope usually from [GitHub Issues](.github/ISSUE_TEMPLATE/))
+- [docs/research/](docs/research/) – background and research (e.g. [linters-formatters](docs/research/linters-formatters.md), [skills-research](docs/research/skills-research.md), [project-grounding-research](docs/research/project-grounding-research.md))
 
 Pre-commit enforces: YAML/JSON/TOML syntax, yamllint, actionlint (workflows), markdownlint, typos, Ruff, commit message (Conventional Commits). Configs: `.editorconfig`, `.markdownlint.yaml`, `.yamllint.yaml`.
 

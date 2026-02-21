@@ -33,6 +33,11 @@ repos:
       - id: typos
   - repo: local
     hooks:
+      - id: check-doc-filenames
+        name: check doc filenames (kebab under docs/)
+        entry: uv run python scripts/check-doc-filenames.py
+        language: system
+        pass_filenames: false
       - id: ruff-check
         name: ruff check
         entry: uv run ruff check src tests

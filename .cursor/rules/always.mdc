@@ -10,3 +10,4 @@ alwaysApply: false
 - **Commands**: `uv run pytest` | `uv run ruff check src tests` | `uv run ruff format src tests` | `uv run pylint src/kalvi_library_template` | `uv run mypy src/kalvi_library_template` | `uv run pre-commit run --all-files`.
 - **Implement**: Get scope and acceptance criteria from the issue; for non-trivial work state a short plan first; implement and add/update tests; run quality checks before done. Use skills **implement-from-issue**, **plan**, **run-quality-checks**; rules **implementation.mdc**, **issues.mdc**.
 - **Skills**: implement-from-issue, plan, triage, review, commit, refactor, docs, test, run-quality-checks, release. **Rules**: always (this), python, implementation, issues, markdown (for .md files).
+- **Docs**: Project principles: [docs/principles.md](docs/principles.md). Decisions: [docs/decisions/](docs/decisions/). Specs (optional): [docs/specs/](docs/specs/). Background: [docs/research/](docs/research/).

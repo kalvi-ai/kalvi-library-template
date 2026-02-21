@@ -1,6 +1,6 @@
 # Linters and formatters: research and recommendation
 
-What you already have vs what’s commonly added for a Python library template (pre-commit, CI, config files, docs).
+What you already have vs what's commonly added for a Python library template (pre-commit, CI, config files, docs).
 
 **Status:** The recommended additions below are **implemented** in this repo (pre-commit hooks, configs, EditorConfig, typos). CI runs `pre-commit run --all-files` so all checks are enforced on push/PR.
 
@@ -30,7 +30,7 @@ What you already have vs what’s commonly added for a Python library template (
 
 - **Tool**: **yamllint** ([adrienverge/yamllint](https://github.com/adrienverge/yamllint)).
 - **Why**: Used for `.github/workflows/ci.yml`, `.github/ISSUE_TEMPLATE/*.yml`, `.pre-commit-config.yaml`. Catches syntax errors and style (indent, line length, document start).
-- **Lightweight alternative**: pre-commit-hooks’ **check-yaml** (syntax only, no style).
+- **Lightweight alternative**: pre-commit-hooks' **check-yaml** (syntax only, no style).
 - **Recommendation**: Prefer **yamllint** for style + syntax; add a `.yamllint.yaml` (e.g. extend `default`, relax line-length for workflow files if needed).
 - **Enforce**: pre-commit + optional CI.
 

@@ -10,3 +10,4 @@ alwaysApply: false
 - **Section titles**: Use real headings (`##`, `###`), not standalone bold/italic (avoids MD036).
 - **Duplicate headings**: Same heading text under different parent sections is allowed (MD024 siblings_only). Avoid duplicate heading text within the same section.
 - **Tables**: Simple tables are fine; alignment is not required (MD060 disabled).
+- **Doc filenames**: Under `docs/` and `docs/research/`, use **lowercase-with-hyphens** (kebab-case) for `.md` filenames; root markdown is allowlisted.

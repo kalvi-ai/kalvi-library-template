@@ -14,6 +14,10 @@ Python library template: src layout, uv, Ruff, pytest. Rename to your project.
 | Package   | [src/kalvi_library_template/](src/kalvi_library_template/) |
 | Tests     | [tests/](tests/)                   |
 | Templates | [.github/ISSUE_TEMPLATE/](.github/ISSUE_TEMPLATE/) |
+| Principles | [docs/principles.md](docs/principles.md) |
+| Decisions | [docs/decisions/](docs/decisions/) |
+| Specs (optional) | [docs/specs/](docs/specs/) |
+| Research/background | [docs/research/](docs/research/) |
 
 ## Commands
 
@@ -36,4 +40,4 @@ Python library template: src layout, uv, Ruff, pytest. Rename to your project.
 
 - **Rules**: `.cursor/rules/` — always (project), python (style), implementation (from-issue flow), issues (source of truth). Agent applies when relevant.
 - **Skills**: `.cursor/skills/` — **implement-from-issue**, **plan**, **triage**, **review**, **commit**, **refactor** (clarity/style, no behavior change), **docs** (README, docstrings, CHANGELOG), **test** (add/extend tests only), **run-quality-checks**, **release**.
-- **MCP**: `.cursor/mcp.json` (GitHub). Set `GITHUB_TOKEN`.
+- **MCP**: `.cursor/mcp.json` (GitHub for issues). Set `GITHUB_TOKEN`. Optional for research: Exa (web/code search), Context7 (up-to-date library docs). See [docs/setup-mcp.md](docs/setup-mcp.md); do not commit API keys.

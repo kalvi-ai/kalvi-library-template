@@ -24,6 +24,7 @@ Activation: agent-decides (or change in Cursor Settings → Rules).
 - `test` – Add or extend tests for existing code (no new features); target module/function; run pytest and Ruff when done.
 - `run-quality-checks` – pytest, Ruff, Pylint, mypy, pre-commit.
 - `release` – version, tag, build, PyPI.
+- `research` – Web/search and docs synthesis (Exa, Context7 when configured); optional write to [docs/research/](docs/research/) with kebab-case filename.
 
 ## AGENTS.md
 
