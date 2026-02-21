@@ -1,0 +1,29 @@
+# MkDocs configuration. Build with: uv run mkdocs build (or uv run nox -s docs).
+site_name: kalvi-library-template
+site_description: Python library template with uv, Ruff, pytest, and Cursor agent setup.
+site_url: https://github.com/kalvi-library-template/kalvi-library-template
+
+theme:
+  name: readthedocs
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+          options:
+            show_source: true
+
+nav:
+  - Home: index.md
+  - Principles: principles.md
+  - Decisions: decisions/README.md
+  - Settings pattern: settings-pattern.md
+  - Testing: testing.md
+  - Cursor setup: cursor-setup.md
+  - MCP setup: setup-mcp.md
+  - API:
+      - kalvi_library_template: api/kalvi_library_template.md
+
+# markdown_extensions: use MkDocs defaults; add pymdown_extensions if needed

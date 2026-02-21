@@ -7,11 +7,16 @@
 5. Update [LICENSE](LICENSE): set your name and year in the copyright line.
 6. Set `GITHUB_TOKEN` for the GitHub MCP (Cursor Settings or env) if using Cursor.
 
+## After creating from this template
+
+- **Security**: In Settings → Code security and analysis, enable **Dependabot alerts** and **Secret scanning** (free for public repos). Optionally enable **Branch protection** for `main` with required status checks (CI) and PR reviews.
+- **Lockfile**: Run `uv lock` after changing dependencies; commit `uv.lock` for reproducible builds. Before release, run `uv run pip-audit` to check for known vulnerabilities.
+
 ## What's included
 
-- **Python**: src layout, uv, pyproject.toml, Ruff (lint + format), pytest, Pylint, mypy, pre-commit, commitizen (commit message lint). Release deps: build, twine.
-- **Cursor**: Rules (project, Python), skills (run-quality-checks, release), AGENTS.md, GitHub MCP.
-- **GitHub**: CI (test, Ruff, Pylint, mypy, pre-commit), issue templates (Task, Bug), SUGGESTED_ISSUES. Commit `uv.lock` for reproducible builds.
+- **Python**: src layout, uv, pyproject.toml, Ruff (lint + format), pytest, pytest-cov, coverage, Pylint, mypy, typeguard, hypothesis, bandit, pip-audit, nox, MkDocs + mkdocstrings, pre-commit, commitizen, build, twine. Optional extras: `[config]` (Pydantic/pydantic-settings), `[logging]` (structlog).
+- **Cursor**: Rules (project, Python), skills (run-quality-checks, release, etc.), AGENTS.md, GitHub MCP.
+- **GitHub**: CI (tests + coverage, Ruff, Pylint, mypy, bandit, pip-audit, pre-commit), issue templates (Task, Bug), pull request template, SUGGESTED_ISSUES. Community files: SECURITY.md, CODE_OF_CONDUCT.md, CHANGELOG.md, .gitattributes, .env.example.
 - **Git hooks**: Run `uv run pre-commit install` and `uv run pre-commit install --hook-type commit-msg` to run checks and Conventional Commit lint on each commit.
 
 ## Make this repo a template

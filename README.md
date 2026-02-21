@@ -24,14 +24,20 @@ Commit messages must follow [Conventional Commits](https://www.conventionalcommi
 
 ## Commands
 
+Run all checks: **`uv run nox`** (tests, lint, coverage, security, pre-commit).
+
 From the terminal, or **Run Task** in Cursor/VS Code (`.vscode/tasks.json`):
 
 ```bash
 uv run pytest
+uv run pytest --cov=src/kalvi_library_template --cov-report=term-missing --cov-fail-under=80
 uv run ruff check src tests scripts
 uv run ruff format src tests scripts
 uv run pylint src/kalvi_library_template scripts
 uv run mypy src/kalvi_library_template scripts
+uv run bandit -r src/kalvi_library_template
+uv run pip-audit
+uv run mkdocs build
 uv run pre-commit run --all-files
 ```
 
@@ -46,9 +52,11 @@ uv run pre-commit run --all-files
 
 ## Documentation
 
-- [docs/](docs/) – overview, how-to, reference
+- [docs/](docs/) – overview, how-to, reference. Build with `uv run mkdocs build` (or `uv run nox -s docs`).
 - [docs/principles.md](docs/principles.md) – project principles
 - [docs/decisions/](docs/decisions/) – architecture decision records (ADRs)
+- [docs/settings-pattern.md](docs/settings-pattern.md) – Pydantic Settings and env config (optional extra `[config]`)
+- [docs/testing.md](docs/testing.md) – testing guide (fixtures, coverage, markers)
 - [docs/specs/](docs/specs/) – formal specifications (optional; scope usually from [GitHub Issues](.github/ISSUE_TEMPLATE/))
 - [docs/research/](docs/research/) – background and research
 - [docs/cursor-setup.md](docs/cursor-setup.md) – Cursor rules, skills, commands, hooks, MCP, indexing

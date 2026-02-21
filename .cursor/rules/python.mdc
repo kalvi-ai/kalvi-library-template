@@ -6,6 +6,6 @@ alwaysApply: false
 
 # Python
 
-- **Style**: Ruff (py311, line-length 88). Rules: E, W, F, I, B, UP, SIM, N, ANN (ANN101/102 ignored). E501, B008 ignored.
+- **Style**: Ruff (py311, line-length 88). Rules: E, W, F, I, B, UP, SIM, N, ANN. E501, B008 ignored.
 - **Imports**: isort via Ruff; first-party is `kalvi_library_template`.
 - **Tests**: pytest; pythonpath includes `src`. Use type hints; mypy strict. When implementing: add or update tests so acceptance criteria from the issue are covered.

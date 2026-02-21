@@ -18,16 +18,32 @@ classifiers = [
 dependencies = []
 
 [project.optional-dependencies]
+config = [
+    "pydantic>=2",
+    "pydantic-settings>=2",
+]
+logging = [
+    "structlog>=24",
+]
 dev = [
     "pytest>=7",
     "pytest-asyncio>=0.21",
+    "pytest-cov>=6",
+    "coverage[toml]>=7",
     "ruff>=0.4",
     "pylint>=3.0",
     "mypy>=1.0",
+    "typeguard>=4",
+    "hypothesis>=6",
+    "bandit>=1.7",
+    "pip-audit>=2",
     "pre-commit>=3.0",
     "commitizen>=3.0",
     "build>=1.0",
     "twine>=5.0",
+    "nox>=2024",
+    "mkdocs>=1.6",
+    "mkdocstrings[python]>=0.26",
 ]
 
 [build-system]
@@ -41,13 +57,22 @@ packages = ["src/kalvi_library_template"]
 dev = [
     "pytest>=7",
     "pytest-asyncio>=0.21",
+    "pytest-cov>=6",
+    "coverage[toml]>=7",
     "ruff>=0.4",
     "pylint>=3.0",
     "mypy>=1.0",
+    "typeguard>=4",
+    "hypothesis>=6",
+    "bandit>=1.7",
+    "pip-audit>=2",
     "pre-commit>=3.0",
     "commitizen>=3.0",
     "build>=1.0",
     "twine>=5.0",
+    "nox>=2024",
+    "mkdocs>=1.6",
+    "mkdocstrings[python]>=0.26",
 ]
 
 [tool.ruff]
@@ -94,3 +119,15 @@ name = "cz_conventional_commits"
 tag_format = "v$version"
 version = "0.1.0"
 version_files = ["pyproject.toml:version", "src/kalvi_library_template/__init__.py:__version__"]
+
+[tool.coverage.run]
+branch = true
+source = ["src/kalvi_library_template", "tests"]
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+tests = ["tests", "*/tests"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 80

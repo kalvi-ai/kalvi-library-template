@@ -25,6 +25,8 @@ ROOT_ALLOWLIST = frozenset(
         "TEMPLATE.md",
         "CHANGELOG.md",
         "LICENSE",
+        "CODE_OF_CONDUCT.md",
+        "SECURITY.md",
     }
 )
 
@@ -47,8 +49,12 @@ def get_tracked_md_files() -> list[str]:
 
 def is_exempt(path: str) -> bool:
     """Paths that are exempt from doc filename rules."""
-    return path == ".github/SUGGESTED_ISSUES.md" or (
-        path.startswith(".cursor/skills/") and path.endswith("/SKILL.md")
+    return (
+        path == ".github/SUGGESTED_ISSUES.md"
+        or (path.startswith(".cursor/skills/") and path.endswith("/SKILL.md"))
+        or path.startswith(
+            "docs/api/"
+        )  # API doc from package name (may have underscores)
     )
 
 

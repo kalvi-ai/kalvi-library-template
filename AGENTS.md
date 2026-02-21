@@ -21,11 +21,14 @@ Python library template: src layout, uv, Ruff, pytest. Cursor-only agent setup f
 
 ## Commands
 
-- Tests: `uv run pytest`
+- **All checks**: `uv run nox` (tests, lint, coverage, security, pre-commit).
+- Tests: `uv run pytest` (with coverage: `uv run pytest --cov=src/kalvi_library_template --cov-fail-under=80` or `uv run nox -s coverage`).
 - Lint: `uv run ruff check src tests scripts`
 - Format: `uv run ruff format src tests scripts`
 - Pylint: `uv run pylint src/kalvi_library_template scripts`
 - Type check: `uv run mypy src/kalvi_library_template scripts`
+- Security: `uv run bandit -r src/kalvi_library_template`, `uv run pip-audit` (or `uv run nox -s security`).
+- Docs: `uv run mkdocs build` (or `uv run nox -s docs`).
 - Pre-commit: `uv run pre-commit run --all-files`
 - Commit messages: Conventional Commits (enforced if hooks enabled). Enable hooks: `uv run pre-commit install` and `uv run pre-commit install --hook-type commit-msg`
 

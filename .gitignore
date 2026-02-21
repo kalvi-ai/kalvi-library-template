@@ -22,6 +22,9 @@ htmlcov/
 .pylint.d/
 .mypy_cache/
 
+# MkDocs
+site/
+
 # IDE / OS
 .idea/
 .vscode/*

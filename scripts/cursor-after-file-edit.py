@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# pylint: disable=invalid-name  # script name for Cursor hook
 """Cursor afterFileEdit hook: run ruff format on edited file(s).
 
 Reads JSON payload from stdin (file_path or paths). Runs `uv run ruff format`
