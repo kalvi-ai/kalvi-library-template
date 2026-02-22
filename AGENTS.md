@@ -37,7 +37,7 @@ Python library template: src layout, uv, Ruff, pytest. Cursor-only agent setup f
 1. Get scope and acceptance criteria from the **GitHub issue**.
 2. For non-trivial work: state a short plan (scope, steps, how to validate) before editing.
 3. Implement; add or update tests.
-4. Run `uv run ruff check src tests scripts` and `uv run pytest` before done. CI also runs Pylint, mypy, and pre-commit.
+4. Before done: run **run-quality-checks** (or `uv run pre-commit run --all-files`) so tests, Ruff, Pylint, mypy, and format all pass. CI runs the same set.
 
 ## Setup (Cursor)
 

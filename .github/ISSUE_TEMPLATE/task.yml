@@ -21,6 +21,16 @@ body:
       description: How we know it's done
       placeholder: "- [ ] Criterion 1\n- [ ] Criterion 2"
   - type: textarea
+    id: verification
+    attributes:
+      label: Verification steps (optional)
+      description: >-
+        How to validate manually or run a quick smoke test (e.g. pytest command,
+        REPL one-liner, or script). Makes acceptance criteria checkable.
+      placeholder: "- Run `uv run pytest tests/test_foo.py`\n- From Python: `from package import X; assert X(...)`"
+    validations:
+      required: false
+  - type: textarea
     id: refs
     attributes:
       label: References

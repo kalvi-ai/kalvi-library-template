@@ -18,6 +18,8 @@ The **project-review** skill builds its rubric from project config, principles, 
 
 Add your own rows below; the skill will treat them as additional rubric rows.
 
+- **Template escape (if derived from this template)**: After bootstrap, no remaining "this template" or `kalvi_library_template` in user-facing docs and skills; wording and paths refer to the new project.
+
 <!--
 Example:
 - **Changelog**: CHANGELOG or release notes updated for user-facing changes.

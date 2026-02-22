@@ -125,7 +125,7 @@ version_files = ["pyproject.toml:version", "src/kalvi_library_template/__init__.
 
 [tool.coverage.run]
 branch = true
-source = ["src/kalvi_library_template", "tests"]
+source = ["src/kalvi_library_template"]
 
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]

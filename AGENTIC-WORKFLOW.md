@@ -1,6 +1,6 @@
 # Agentic development flow: research and recommendation
 
-Deep research summary on agentic workflows, spec-driven development, and skills, with a concrete recommendation for this template and when to adopt heavier approaches.
+**Reference doc.** For day-to-day context, use [AGENTS.md](AGENTS.md) and [docs/principles.md](docs/principles.md). This file is a deeper summary of agentic workflows, spec-driven development, and skills, with a concrete recommendation for this template and when to adopt heavier approaches.
 
 ---
 

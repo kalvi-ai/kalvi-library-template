@@ -6,10 +6,10 @@ Python library template: src layout, uv, Ruff, pytest, and Cursor agent setup. *
 
 ## Setup
 
-- Python 3.11+
+- **Python 3.11+** (supported: 3.11, 3.12, 3.13; see classifiers in `pyproject.toml`).
 - [uv](https://docs.astral.sh/uv/)
 
-The repo uses `.python-version` for uv's default locally; CI tests all supported versions (see classifiers in `pyproject.toml`).
+The repo uses `.python-version` for uv's default locally; CI tests all supported versions.
 
 ```bash
 uv sync --group dev
@@ -49,8 +49,9 @@ uv run pre-commit run --all-files
 - `tests/` – pytest
 - `examples/` – [examples/](examples/) (e.g. `hello.py`)
 - [AGENTS.md](AGENTS.md) – Cursor agent guide (commands, paths, skills, MCP). See [docs/cursor-setup.md](docs/cursor-setup.md) for rules, hooks, commands, indexing.
-- [AGENTIC-WORKFLOW.md](AGENTIC-WORKFLOW.md) – agentic flow research and recommendation
+- [AGENTIC-WORKFLOW.md](AGENTIC-WORKFLOW.md) – agentic workflow research and when to use heavier approaches
 - [CONTRIBUTING.md](CONTRIBUTING.md) – how to contribute
+- Logging/observability: [docs/decisions/0001-logging-in-libraries.md](docs/decisions/0001-logging-in-libraries.md)
 
 ## Documentation
 
