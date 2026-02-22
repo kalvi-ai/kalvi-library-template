@@ -30,9 +30,10 @@ Full path from “implement this issue” to “commit with approval”. Optiona
 flowchart TD
     Start([Implement issue]) --> Triage[triage]
     Triage -->|not ready| Stop1([Stop: report])
-    Triage -->|ready| Research["(optional) research"]
-    Triage -->|ready| Plan["(optional) plan"]
-    Triage -->|ready| Implement[implement-from-issue]
+    Triage -->|ready| Next{Next step?}
+    Next -->|research first| Research["(optional) research"]
+    Next -->|plan first| Plan["(optional) plan"]
+    Next -->|implement| Implement[implement-from-issue]
     Research --> Plan
     Research --> Implement
     Plan --> Implement
@@ -43,6 +44,8 @@ flowchart TD
     Review --> Commit[commit]
     Commit --> Stop2([Done])
 ```
+
+After triage (ready), choose **one** next step: research, plan, or implement. Research may be followed by plan or by implement; plan is always followed by implement. So valid paths are: implement only; plan → implement; research → implement; research → plan → implement.
 
 - **triage**: Classify issue, check completeness; if not ready, stop and report.
 - **(optional) research**: Use when the issue or approach depends on external APIs, standards, or current best practices.

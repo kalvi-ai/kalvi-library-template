@@ -8,7 +8,7 @@ This project uses [Model Context Protocol](https://cursor.com/docs/context/mcp) 
 
 ## Optional
 
-- **Exa** – Web and code search. URL: `https://mcp.exa.ai/mcp`. For higher rate limits, set `EXA_API_KEY` (see [Exa MCP](https://docs.exa.ai/reference/exa-mcp)).
+- **Exa** – Web and code search. URL: `https://mcp.exa.ai/mcp`. For higher rate limits, set `EXA_API_KEY` (see [Exa MCP](https://docs.exa.ai/reference/exa-mcp)). (Other projects may use Brave Search MCP for web search; Exa and Brave both support deep research flows with the **research** skill.)
 - **Context7** – Up-to-date library documentation. URL: `https://mcp.context7.com/mcp`. Set `CONTEXT7_API_KEY` in env or Cursor MCP settings.
 
 ## Optimization

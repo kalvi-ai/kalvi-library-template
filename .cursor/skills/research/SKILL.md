@@ -26,7 +26,7 @@ Use when the user asks for **research**, **web search**, **deep dive**, or **cur
 
 ## MCP
 
-- **Exa MCP**: Use for web/code search when configured (set API key in MCP config).
+- **Exa MCP**: Use for web/code search when configured (set API key in MCP config). This supports the same "deep research" flow as projects that use Brave Search MCP (gather → synthesize → optionally write to `docs/research/`).
 - **Context7 MCP**: Use for up-to-date library documentation when configured (set `CONTEXT7_API_KEY` in MCP config).
 
 ## Output

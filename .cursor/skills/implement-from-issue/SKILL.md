@@ -31,3 +31,14 @@ description: Implements work from a GitHub issue (scope + acceptance criteria). 
 - One issue = one logical change. Don’t mix unrelated work.
 - If the issue is vague, ask for clarification or propose concrete acceptance criteria.
 - After implementing, you can suggest closing the issue with a phrase like “Fixes #N” in the commit message (Conventional Commits: `fix: ...` or `feat: ...`).
+
+## GitHub issue progress updates
+
+When implementing a **specific issue** (issue number and repository known), keep the issue updated on GitHub so status is visible. Determine **owner** and **repo** from the issue URL or the current repository (e.g. git remote or project config).
+
+1. **When starting**: Post a short comment that work has started (e.g. branch name if created). Use GitHub MCP `add_issue_comment` with the issue's owner and repo.
+2. **After implementation (before validation)**: Post a comment that implementation is done and tests/checks are next.
+3. **After run-quality-checks**: Post a comment with result (e.g. "Checks passed" or "Checks failed: …") and next step (review / commit / fix).
+4. **Issue body checkboxes**: If the issue body has acceptance-criteria checkboxes (e.g. `- [ ] Implementation complete`), update the body via GitHub MCP `issue_write` (method `update`) to check off items the agent verified (e.g. `- [x] Implementation complete`). Leave manual-only steps unchecked. If the body format differs, skip this step.
+
+If GitHub MCP is unavailable or the token is missing, skip posting comments and body updates and continue the rest of the skill; do not fail the skill.
