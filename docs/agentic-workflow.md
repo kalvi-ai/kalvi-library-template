@@ -61,9 +61,11 @@ When the user wants a plan only (no code yet). Optional research when the plan d
 
 ```mermaid
 flowchart TD
-  Start([Plan only]) --> Research[optional research]
-  Research --> Plan[plan]
-  Plan --> Out([Output: scope, steps, validation])
+  Start([Plan only]) --> NeedResearch{Research?}
+  NeedResearch -->|yes| Research[optional research]
+  NeedResearch -->|no| Plan
+  Research --> Plan
+  Plan[plan] --> Out([Output: scope, steps, validation])
   Out --> Later([Later: implement-from-issue to run-quality-checks to commit])
 ```
 
