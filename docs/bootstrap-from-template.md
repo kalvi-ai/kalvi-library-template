@@ -82,9 +82,11 @@ Update content in:
 | `.cursor/rules/implementation.mdc` | Package path and first-party |
 | `.cursor/rules/python.mdc` | known-first-party |
 | `.cursor/commands/run-quality-checks.md` | pylint/mypy paths |
-| `.vscode/tasks.json` | pylint and mypy commands |
+| `.vscode/tasks.json` | both pylint and mypy task `command` to use `src/<package_name>` (often missed) |
 | `examples/hello.py` | Import and message |
 | `tests/test_example.py` | Import |
 | `tests/__init__.py` | Comment |
+
+**Template wording cleanup:** Replace "this template" with "this project" (or equivalent) in docs and skills so the repo reads as the new library. Check: SECURITY.md, docs/cursor-setup.md, README.md, docs/research/linters-formatters.md, docs/decisions/0001-logging-in-libraries.md, docs/settings-pattern.md, AGENTIC-WORKFLOW.md, .cursor/skills/project-review/SKILL.md, TEMPLATE.md. For exact replacements per file, see the bootstrap-from-template skill **Step 3b**.
 
 After edits: run `uv lock`, then `uv run pytest` and `uv run ruff check src tests scripts` (or `uv run nox`) to verify.

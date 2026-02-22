@@ -62,13 +62,31 @@ Replace **every** occurrence in the repo (excluding `.git/`, `.venv/`, and binar
 | `.cursor/rules/implementation.mdc` | Package path and first-party name |
 | `.cursor/rules/python.mdc` | known-first-party package name |
 | `.cursor/commands/run-quality-checks.md` | pylint/mypy paths |
-| `.vscode/tasks.json` | pylint and mypy command paths |
+| `.vscode/tasks.json` | pylint and mypy `command` entries to `src/<package_name>` (often missed; check both tasks). |
 | `examples/hello.py` | Import and any print message |
 | `tests/test_example.py` | Import |
 | `tests/__init__.py` | Comment |
 | `.github/SUGGESTED_ISSUES.md` | Rename step: can say "Already done if you used the bootstrap-from-template skill" or keep generic |
 
 If the user provided a **description**, set it in `pyproject.toml` `description` and optionally in the first line or paragraph of `README.md`. If they provided **repo URL** (e.g. `https://github.com/org/repo` or `org/repo`), use it for `mkdocs.yml` `site_url`, `CHANGELOG.md` compare/tag links, `SECURITY.md`, and README repo link.
+
+### 3b. Template wording cleanup (after renames)
+
+Several docs and skills still say "this template" or refer to the template repo; update them so the new project reads as the actual library.
+
+| File | What to change |
+|------|----------------|
+| `SECURITY.md` | Replace "this template" / "the template" with "this project" / "the project" (or equivalent). |
+| `docs/cursor-setup.md` | Same. |
+| `README.md` | Same; also remove or reword any "Replace…" note that still refers to the template. |
+| `docs/research/linters-formatters.md` | Same. |
+| `docs/decisions/0001-logging-in-libraries.md` | Same. |
+| `docs/settings-pattern.md` | Same. |
+| `AGENTIC-WORKFLOW.md` | Same. |
+| `.cursor/skills/project-review/SKILL.md` | Same. |
+| `TEMPLATE.md` | Already updated in Step 3; ensure no remaining "this template" or "rename" wording that implies the repo is still the template. |
+
+Optional: run a search for `template` (and `kalvi.library.template` if any remain) in `.md`, `.mdc`, `.yml` and fix any leftover "this template" or old package references.
 
 ### 4. Regenerate lockfile and verify
 
