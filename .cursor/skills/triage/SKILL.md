@@ -1,6 +1,8 @@
 ---
 name: triage
-description: Triages a GitHub issue: classify, check completeness, suggest labels and next steps. Use when the user asks to triage, review, or assess an issue (or open issues).
+description: >-
+  Triages a GitHub issue: classify, check completeness, suggest labels and next
+  steps. Use when the user asks to triage, review, or assess an issue (or open issues).
 ---
 
 # Triage issue

@@ -1,6 +1,9 @@
 ---
 name: maintain
-description: Keep the library and docs in good shape: sync documentation, CHANGELOG, dependency hygiene, and optional project-review. Use when the user asks to maintain the library, update docs, or keep things up to date.
+description: >-
+  Keep the library and docs in good shape: sync documentation, CHANGELOG,
+  dependency hygiene, and optional project-review. Use when the user asks to
+  maintain the library, update docs, or keep things up to date.
 ---
 
 # Maintain library and documentation

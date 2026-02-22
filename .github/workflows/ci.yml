@@ -123,6 +123,11 @@ jobs:
       - name: Assert [logging] extra is installed
         run: uv run python -c "import structlog; print('structlog:', structlog.__version__)"
 
+      - name: Test optional [logging] extra
+        env:
+          REQUIRE_LOGGING_EXTRA: "1"
+        run: uv run pytest tests/test_optional_logging.py -v
+
   build:
     runs-on: ubuntu-latest
     steps:
