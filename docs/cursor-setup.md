@@ -7,7 +7,7 @@ This template configures Cursor as the single AI agent. All paths and features b
 | Feature | Path | Purpose |
 |---------|------|---------|
 | **Rules** | `.cursor/rules/` | Scoped rules (activation, globs); see **AGENTS.md** in the repo root for project context. |
-| **Skills** | `.cursor/skills/` | Procedural skills (implement-from-issue, plan, review, project-review, etc.). |
+| **Skills** | `.cursor/skills/` | Procedural skills (implement-from-issue, plan, review, project-review, etc.). See [Agentic workflow](agentic-workflow.md) for the canonical loop and when to use which skill. |
 | **Commands** | `.cursor/commands/` | Slash commands (e.g. `/code-review`, `/run-quality-checks`) for repeatable workflows. |
 | **Hooks** | `.cursor/hooks.json` | Lifecycle hooks (e.g. format after file edit). |
 | **MCP** | `.cursor/mcp.json` | Tools (GitHub, Exa, Context7). See [setup-mcp.md](setup-mcp.md). |

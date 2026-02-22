@@ -17,6 +17,7 @@ Python library template: src layout, uv, Ruff, pytest. Cursor-only agent setup f
 | Principles | [docs/principles.md](docs/principles.md) |
 | Decisions | [docs/decisions/](docs/decisions/) |
 | Specs (optional) | [docs/specs/](docs/specs/) |
+| Agentic workflow | [docs/agentic-workflow.md](docs/agentic-workflow.md) — canonical loop (R→P→E→V) and skill chain; use this for the finalized flow. |
 | Research/background | [docs/research/](docs/research/) |
 
 ## Commands
@@ -33,6 +34,8 @@ Python library template: src layout, uv, Ruff, pytest. Cursor-only agent setup f
 - Commit messages: Conventional Commits (enforced if hooks enabled). Enable hooks: `uv run pre-commit install` and `uv run pre-commit install --hook-type commit-msg`
 
 ## When implementing
+
+Follow the canonical loop: [Agentic workflow](docs/agentic-workflow.md) (Research → Plan → Execute → Validate). In short:
 
 1. Get scope and acceptance criteria from the **GitHub issue**.
 2. For non-trivial work: state a short plan (scope, steps, how to validate) before editing.

@@ -24,6 +24,7 @@ nav:
   - Settings pattern: settings-pattern.md
   - Testing: testing.md
   - Cursor setup: cursor-setup.md
+  - Agentic workflow: agentic-workflow.md
   - MCP setup: setup-mcp.md
   - Project review rubric: project-review-rubric.md
   - Decisions (ADRs):
@@ -31,6 +32,7 @@ nav:
       - 0001 logging: decisions/0001-logging-in-libraries.md
   - Research:
       - README: research/README.md
+      - Agentic workflow (background): research/agentic-workflow-research.md
       - Linters and formatters: research/linters-formatters.md
       - Project grounding: research/project-grounding-research.md
       - Skills research: research/skills-research.md
