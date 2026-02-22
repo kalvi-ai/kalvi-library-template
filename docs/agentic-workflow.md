@@ -34,13 +34,13 @@ Full path from "implement this issue" to "commit with approval". Optional steps:
 flowchart TD
   Start([Implement issue]) --> Triage[triage]
   Triage -->|not ready| Stop1([Stop: report])
-  Triage -->|ready| Research[(optional) research]
-  Research --> Plan[(optional) plan]
+  Triage -->|ready| Research[optional research]
+  Research --> Plan[optional plan]
   Plan --> Implement[implement-from-issue]
   Implement --> Checks[run-quality-checks]
   Checks --> Pass{Pass?}
   Pass -->|no| Implement
-  Pass -->|yes| Review[(optional) review]
+  Pass -->|yes| Review[optional review]
   Review --> Commit[commit]
   Commit --> Stop2([Done])
 ```
@@ -61,10 +61,10 @@ When the user wants a plan only (no code yet). Optional research when the plan d
 
 ```mermaid
 flowchart TD
-  Start([Plan only]) --> Research[(optional) research]
+  Start([Plan only]) --> Research[optional research]
   Research --> Plan[plan]
   Plan --> Out([Output: scope, steps, validation])
-  Out --> Later([Later: implement-from-issue → run-quality-checks → commit])
+  Out --> Later([Later: implement-from-issue to run-quality-checks to commit])
 ```
 
 ---
@@ -75,7 +75,7 @@ flowchart TD
 |-------------|----------|------|
 | Do issue #N / Implement this | **implement-from-issue** | **run-quality-checks** |
 | Break this down / Plan this | **plan** | (later) **implement-from-issue** |
-| Which issues are ready? / Triage #N | **triage** | If ready → **implement-from-issue** (or **research** → **plan**). If not → stop. |
+| Which issues are ready? / Triage #N | **triage** | If ready → **implement-from-issue**, or optionally **research** → **plan** then **implement-from-issue**. If not → stop. |
 | Review my changes / Review before commit | **review** | done, or **commit** if user wants to commit |
 | Run tests / lint / verify green | **run-quality-checks** | done |
 | Commit / suggest commit message | **commit** | done (after approval) |
@@ -97,7 +97,7 @@ How to chain after each skill.
 
 | Skill | Typical next step |
 |-------|--------------------|
-| **triage** | If ready → **research** (optional) or **implement-from-issue**. If not ready → stop. |
+| **triage** | If ready → **implement-from-issue**, or optionally **research** → **plan** then **implement-from-issue**. If not ready → stop. |
 | **research** | **plan** or **implement-from-issue** (or stop if standalone). |
 | **plan** | (Later) **implement-from-issue**. |
 | **implement-from-issue** | **run-quality-checks**. |
@@ -105,7 +105,8 @@ How to chain after each skill.
 | **review** | **commit** if user wants to commit; else stop. |
 | **commit** | Stop (commit runs once after approval). |
 | **debug** | **run-quality-checks** then stop or **commit**. |
-| **test**, **refactor**, **docs** | **run-quality-checks** then stop or **commit**. |
+| **test**, **refactor** | **run-quality-checks** then stop or **commit**. |
+| **docs** | If code touched → **run-quality-checks** then stop or **commit**. If docs only → stop. |
 | **maintain** | Propose commit → **commit** if user approves. |
 | **dependency-update** | **run-quality-checks** → propose commit → **commit** if approved. |
 | **release** | Stop. |
@@ -141,4 +142,4 @@ Same skills can be invoked by natural-language request. See [Cursor setup](curso
 
 **Issue → triage (optional) → research/plan if needed → implement-from-issue → run-quality-checks → review (optional) → commit (with approval) → done.**
 
-All paths and commands: [AGENTS.md](../AGENTS.md).
+All paths and commands: **AGENTS.md** (repo root).

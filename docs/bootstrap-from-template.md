@@ -9,11 +9,11 @@ End-to-end flow from a bare template to a repo where you can say “implement #3
 | Phase | What to do |
 |-------|------------|
 | **1. Create repo** | On GitHub: **Use this template** → Create new repository. Enable **Issues** (Settings → General). |
-| **2. Bootstrap** | Clone, open in Cursor. Tell the agent you’re setting up a new library; give **library name** (required); optionally description, author, repo URL. Agent runs **bootstrap-from-template** skill (rename package, replace everywhere, update pyproject.toml, docs, CI, .cursor, LICENSE, etc.). Or do it manually: see **Full file checklist** below and [TEMPLATE.md](../TEMPLATE.md). |
-| **3. Update documentation** | After bootstrap: adjust README for your project (install/usage), [LICENSE](../LICENSE) (copyright), [SECURITY.md](../SECURITY.md) (advisory URL). Use **docs** or **maintain** skill if you want the agent to sync docs. |
-| **4. Create GitHub issues** | Create issues from [.github/SUGGESTED_ISSUES.md](../.github/SUGGESTED_ISSUES.md) (rename, first feature, verify CI, update README). Optionally use **triage** to classify and mark “ready for implement.” Issues are the source of truth for **implement-from-issue**. |
+| **2. Bootstrap** | Clone, open in Cursor. Tell the agent you’re setting up a new library; give **library name** (required); optionally description, author, repo URL. Agent runs **bootstrap-from-template** skill (rename package, replace everywhere, update pyproject.toml, docs, CI, .cursor, LICENSE, etc.). Or do it manually: see **Full file checklist** below and **TEMPLATE.md** (repo root). |
+| **3. Update documentation** | After bootstrap: adjust README for your project (install/usage), **LICENSE** (copyright), **SECURITY.md** (repo root) (advisory URL). Use **docs** or **maintain** skill if you want the agent to sync docs. |
+| **4. Create GitHub issues** | Create issues from **.github/SUGGESTED_ISSUES.md** (repo root) (rename, first feature, verify CI, update README). Optionally use **triage** to classify and mark “ready for implement.” Issues are the source of truth for **implement-from-issue**. |
 | **5. Cursor & MCP** | Set **GITHUB_TOKEN** (Cursor Settings → Tools or env) so the GitHub MCP can read/write issues. Optional: [Exa](setup-mcp.md), Context7. See [cursor-setup.md](cursor-setup.md) and [setup-mcp.md](setup-mcp.md). |
-| **6. Repo hygiene** | [TEMPLATE.md](../TEMPLATE.md): enable Dependabot alerts, Secret scanning; optionally branch protection for `main`. Run `uv lock` after dependency changes; before release run `uv run pip-audit`. |
+| **6. Repo hygiene** | **TEMPLATE.md** (repo root): enable Dependabot alerts, Secret scanning; optionally branch protection for `main`. Run `uv lock` after dependency changes; before release run `uv run pip-audit`. |
 | **7. Verify** | Push a branch; confirm CI is green. Run `uv run nox` (or pytest, ruff, pre-commit) locally. |
 | **→ Ready** | You can now use **implement-from-issue**, **plan**, **triage**, **review**, **release**, etc. with a clean backlog and working tooling. |
 
